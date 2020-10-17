@@ -6,4 +6,13 @@ class Account
     self.email = email
   end
 
+  def messages (from, to, body)
+    self.create(from, to, body)
+  end
+  private
+  def create (from, to, body)
+    @from = from
+    @to = to
+    @body = body
+  end
 end
